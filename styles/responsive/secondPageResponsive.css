@@ -1,0 +1,93 @@
+@import url(./firstPageResponsive.css);
+@media only screen and (max-width: 1400px) {
+  .first-content {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .heading {
+    margin-bottom: 0.6rem;
+  }
+  .education-content {
+    padding: var(--main-padding-1180px);
+    flex-direction: column;
+    height: 100%;
+  }
+  .first-content {
+    width: 90%;
+    height: 40%;
+  }
+  .third-content {
+    margin-bottom: 2rem;
+  }
+  .button-join > button {
+    background-color: transparent;
+  }
+  .button-join > button:hover {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .skills-div {
+    height: auto;
+  }
+  .heading {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .education-content {
+    padding: var(--main-padding-608px);
+  }
+  .first-content {
+    width: 90%;
+    height: 30%;
+  }
+ .second-page-content {
+    height: 120%;
+  }
+  .heading span {
+    margin-bottom: 0.7rem;
+  }
+
+  .skills-div {
+    height: auto;
+    padding: var(--main-padding-608px);
+  }
+  .skills-content button {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .education-content {
+  padding: var(--main-padding-498px);    
+  }
+  .skills-div {
+    padding: var(--main-padding-498px);
+  }
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+  .card-cvonte4nty {
+    font-style: 1.2rem;
+  }
+
+  .skills-content button {
+    margin: 2rem 1rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .skills-content button {
+    width: 70%;
+    height: 50%;
+    margin: 2rem 1rem;
+  }
+  .skills-content button img {
+    height: 60px;
+    width: 60px;
+  }
+}
