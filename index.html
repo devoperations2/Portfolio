@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Hayes- Software Engineer</title>
+    <meta name="description"
+        content="Join our community for learning programming languages, software engineering core subjects...">
+    <meta name="theme-color" content="#8490ff">
+    <meta property="og:title" content="Partha Sarathi Muduli - Aspiring Software Engineer">
+    <link rel="icon" href="./images/logo_transparent.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="./styles/firstPage.css">
+    <link rel="stylesheet" href="./styles/secondPage.css">
+    <link rel="stylesheet" href="./styles/project-page.css">
+    <link rel="stylesheet" href="./styles/contactPage.css">
+    <link rel="stylesheet" href="./styles/popup.css">
+    <link rel="stylesheet" href="./styles/footerPage.css">
+    <link rel="stylesheet" href="./styles/responsive/firstPageResponsive.css">
+    <link rel="stylesheet" href="./styles/responsive/secondPageResponsive.css">
+    <link rel="stylesheet" href="./styles/responsive/projectSectionResponsive.css">
+    <link rel="stylesheet" href="./styles/responsive/contactPageResponsive.css">
+    <link rel="stylesheet" href="./styles/responsive/footerPageResponsive.css">
+    <link rel="stylesheet" href="./styles/responsiveMenu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- for Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- For Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- For font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- for w3c hamburger library -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <!-- ! JS files inclusion here -->
+    <!--  ?for custom js files -->
+    <script defer src="./scripts/menuBar.js"></script>
+    <script defer src="./scripts/autoText.js"></script>
+    <script defer src="./scripts/card_hover.js"></script>
+    <script defer src="./scripts/pop-up.js"></script>
+    <script defer src="./scripts/projectBtn.js"></script>
+    <script defer src="./scripts/darkMode.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="first-page">
+
+            <!-- nav bar starts -->
+            <div class="nav-bar">
+
+                <a href="#" class="navbar-logo-parent">
+                    <img class="navbar-logo" src="" alt="logo">
+                </a>
+
+                <!-- content of menu -->
+                <div class="menu-content">
+                    <ul id="menu-ul" class="menu-ul">
+                        <li><a class="menuItem" href="#">Home</a></li>
+                        <li><a class="menuItem" href="./about.html" target="_self">About</a></li>
+                        <li><a class="menuItem" href="#skill">Skills</a></li>
+                        <li><a class="menuItem" href="#project">Projects</a></li>
+                        <li><a class="menuItem" href="#conatct">Contact</a></li>
+                        <li>
+                            <button
+                            class="darkModeCheckbox"
+                            role="switch"
+                            aria-checked="false"
+                            >
+                            </button>
+                        </li>
+                        <li class="menu-btn">
+                            <button class="hamburger">
+                                <ion-icon name="menu-outline"></ion-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-bar-smallScreen">
+                <a href="javascript:void(0)"><button onclick="closeNav()" class="close-btn-smallScreen"><ion-icon name="close-outline"></ion-icon></button></a>
+
+                <!-- content of menu -->
+                <div class="menu-content-smallScreen">
+                    <ul>
+                        <li class="menu-smallScreen" onclick="closeNav()">
+                          <i class="fa-solid fa-house"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="menu-smallScreen" onclick="closeNav()">
+                            <i class="fa-solid fa-user"></i>
+                            <a href="#">About</a>
+                        </li>
+                        <li class="menu-smallScreen" onclick="closeNav()">
+                            <i class="fa-solid fa-toolbox"></i>
+                            <a href="#skill">Skills</a>
+                        </li>
+                        <li class="menu-smallScreen" onclick="closeNav()">
+                            <i class="fa-solid fa-code"></i>
+                            <a href="#project">Project</a>
+                        </li>
+                        <li class="menu-smallScreen" onclick="closeNav()">
+                            <i class="fa-solid fa-message"></i>
+                            <a href="#conatct">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="small-screen-darkMode"> 
+                    <span class="themeName">Dark Mode</span>
+                    <button
+                    class="darkModeCheckbox" id="modeCheckbox"
+                    role="switch"
+                    aria-checked="false"
+                    >
+                    </button>
+                </div>
+            </div>
+            <!-- nav bar ends --
+            <!-- 1st page content starts -->
+            <div class="first-page-container">
+                <div class="firstPageMain-div">
+                    <h1 class="animate__bounce">Hi, My name is Chris <br>I'm a<span class="cursor_color"> <span class="gradient"></span></span>
+                    </h1>
+    
+                    <div class="button-join">
+                        <a href="#conatct"><button class="firstPage-btn btn webpage-btn">Hire me</button></a>
+                    </div>
+                </div>
+                <div class="firstPageMain-Image">
+                    <img src="https://i.imgur.com/GWIRy3f.jpg" alt="profile picture">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2nd page starts -->
+    <div class="second-page">
+        <div class="second-page-content">
+            <div class="heading" data-aos="fade-up">
+                <span></span>
+            </div>
+            <div class="education-content" id="education-content" data-aos="fade-up">
+                <div class="first-content">
+                    <div class="card-content">
+                        <h3></h3>
+                        <div class="card-text" id="card-text-university">
+                            <span></span>
+                            <p> <span></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-content second-content" >
+                    <div class="card-content">
+                        <h3></h3>
+                        <div class="card-text card-text-2" id="card-text-college">
+                            <span></span>
+                            <p> <span></span></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="first-content third-content" >
+                    <div class="card-content">
+                        <h3></h3>
+                        <div class="card-text card-text-3" id="card-text-school">
+                            <span></span>
+                            <p> <span></span></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!--! FOR BACKUP IF THE NEW CARD ISNT GOOD <div class="first-content third-content card-image" data-aos="flip-right">
+                    <div class="card-content">
+                        <h3>School</h3>
+                        <div class="card-text card-text-3" id="card-text-school">
+                            <span>SVM Keshavdham, Cuttack</span>
+                            <p>10th, Odisha Board, <span>77.83%</span></p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+    
+            <div class="skills-div" id="skill">
+                <div class="inner-skills-div" data-aos="fade-up">
+                    <div class="skills-heading">
+                        <span>Skills</span>
+                    </div>
+                    <div  class="skills-content" id="allIcons">
+    
+                        <button class="java"  data-aos="zoom-in" data-aos-duration="5000"><img id="java" class="skillIconImg"
+                                src="./images/icons/javaIcon.png" alt="java icon"><span class="skillIconText"
+                                id="javaSpan">Java</span></button>
+    
+                        <button class="c"  data-aos="zoom-in" data-aos-duration="5000"><img id="c" class="skillIconImg2"
+                                src="./images/icons/cIcon.png" alt=""><span class="skillIconText2" id="cSpan">C
+                                Language</span></button>
+    
+                        <button class="cPlusPlus" data-aos="zoom-in" data-aos-duration="5000"><img id="cpp"
+                                class="cPlusPlusIcon skillIconImg3" src="./images/icons/c++Icon.png" alt="c++ image"><span
+                                class="skillIconText3" id="cppSpan">C++</span></button>
+    
+                        <button class="html" data-aos="zoom-in" data-aos-duration="5000"><img id="html"
+                                class="skillIconImg4" src="./images/icons/html-5Icon.png" alt="html-5 icon"><span
+                                class="skillIconText4" id="htmlSpan">HTML5</span></button>
+    
+                        <button class="css" data-aos="zoom-in" data-aos-duration="5000"><img id="css" class="skillIconImg5"
+                                src="./images/icons/css-3Icon.png" alt="css-3 icon"><span class="skillIconText5"
+                                id="cssSpan">CSS3</span></button>
+    
+                        <button class="js" data-aos="zoom-in" data-aos-duration="5000"><img id="js" class="skillIconImg6"
+                                src="./images/icons/jsIcon.png" alt="JavaScript Icon"><span class="skillIconText6"
+                                id="jsSpan">Javascript</span></button>
+    
+                        <button class="react" data-aos="zoom-in" data-aos-duration="5000"><img id="react" 
+                                class="skillIconImg7" src="./images/icons/reactIcon.png" alt="react image"><span
+                                class="skillIconText7" id="reactSpan">React</span></button>
+    
+                        <button class="node" data-aos="zoom-in" data-aos-duration="5000"><img id="node" 
+                                class="skillIconImg8" src="./images/icons/nodeJsIcon.png" alt="node-js icon"><span
+                                class="skillIconText8" id="nodeSpan">Node.js</span></button>
+    
+                        <button class="git" data-aos="zoom-in" data-aos-duration="5000"><img id="git" class="skillIconImg9"
+                                src="./images/icons/gitIcon.png" alt="git icon"><span class="skillIconText9"
+                                id="gitSpan">Git</span></button>
+    
+                        <button class="github" data-aos="zoom-in" data-aos-duration="5000"><img id="github" 
+                                class="skillIconImg10" src="./images/icons/githubIcon.png" alt="github icon"><span
+                                class="skillIconText10" id="githubSpan">Github</span></button>
+    
+                        <button class="python" data-aos="zoom-in" data-aos-duration="5000"><img id="python" 
+                                class="skillIconImg11" src="./images/icons/pythonIcon.png" alt="python icon"><span
+                                class="skillIconText11" id="pythonSpan">Python</span></button>
+    
+                        <button class="networking" data-aos="zoom-in" data-aos-duration="5000"><img id="network" 
+                                class="skillIconImg12" src="./images/icons/networkingIcon.png" alt="Networking icon"><span
+                                class="skillIconText12" id="networkSpan">Networking</span></button>
+    
+                        <button class="SE" data-aos="zoom-in" data-aos-duration="5000"><img id="se"  class="skillIconImg13"
+                                src="./images/icons/softwareIcon.png" alt="Software Engineering icon"><span
+                                class="skillIconText13" id="seSpan">Software Engineering</span></button>
+    
+                        <button class="SD" data-aos="zoom-in" data-aos-duration="5000"><img id="sd"  class="skillIconImg14"
+                                src="./images/icons/systemDesignIcon.png" alt="System Design icon"><span
+                                class="skillIconText14" id="sdSpan">System Design</span></button>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <!--todo Project section Starts -->
+
+        <div class="project-section-div" id="project">
+            <div class="project-section-heading">
+                <span data-aos="fade-up">Projects</span>
+            </div>
+            <div class="project-btns" data-aos="fade-up">
+                <div class="project-btn" data-btn-num="1"> Projects</div>
+                
+            </div>
+            <div class="project-content" id="projectContent" >
+                <div class="project-img-overlay project-btn--1" data-aos="flip-left">
+                    <img src="https://i.imgur.com/Cnv1s2r.png" alt="t0-do-app">
+                    <div class="overlay">
+                        <a href="https://devoperations2.github.io/Connect-Four/" target="_blank" class="project-card-heading">
+                            Connect Four
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-img-overlay project-btn--2" data-aos="fade-up">
+                    <img src="https://i.imgur.com/RNsraWu.jpg" alt="to-do-app">
+                    <div class="overlay">
+                        <a href="https://snowboarding-resorts.herokuapp.com/" target="_blank" class="project-card-heading">
+                            Snowboarding Resorts
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-img-overlay project-btn--1" data-aos="flip-right">
+                    <img src="./images/projectPageImg/portfolioImg.webp" alt="t0-do-app">
+                    <div class="overlay">
+                        <a href="https://basic-to-do-app.netlify.app/" target="_blank" class="project-card-heading">
+                            Personal Portfolio
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-img-overlay project-btn--2" data-aos="flip-left">
+                    <img src="./images/projectPageImg/libraryProjectImg.webp" alt="t0-do-app">
+                    <div class="overlay">
+                        <a href="https://librarymanagment-by-teamlemonx.netlify.app/" target="_blank" class="project-card-heading">
+                            Library Management <br>System
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-img-overlay project-btn--1" data-aos="fade-up">
+                    <img src="./images/projectPageImg/toDoAppImg1.webp" alt="t0-do-app">
+                    <div class="overlay">
+                        <a href="https://basic-to-do-app.netlify.app/" target="_blank" class="project-card-heading">
+                            Google Home Page
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-img-overlay project-btn--2" data-aos="flip-right">
+                    <img src="./images/projectPageImg/rockPaperScissorImg.webp" alt="t0-do-app">
+                    <div class="overlay">
+                        <a href="https://basic-to-do-app.netlify.app/" target="_blank" class="project-card-heading">
+                            Old portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- todo: Third page starts here -->
+          
+          <div class="third-page">
+            <div class="contact-page-main-content">
+                 <div class="location-section">
+                     <!--? The normal embeded tag in google map isnt pushing to github showing server error message so I added this embeded tag https://github.com/joomla/joomla-cms/issues/36022 -->
+                    <p  data-aos="zoom-in-up"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.0421967667216!2d85.89367801472132!3d20.463459986307257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190d7a181999fd%3A0xe48e3475c7591d81!2sRavenshaw%20University%2C%20Cuttack!5e0!3m2!1sen!2sin!4v1647529184028!5m2!1sen!2sin" width="937" height="937"></iframe></p>
+                 </div>
+                 <div class="social-section-div" id="conatct">
+                     <div class="contact-input-section" data-aos="zoom-in-up">
+                        <div class="contact-main-content">
+                            <div class="contact-heading">
+                                <span>Contact Me</span>
+                            </div>
+                            <div class="input-div">
+                                <span data-aos="zoom-in">First Name:</span><input class="inputData" data-aos="zoom-in" type="text" id="firstName" placeholder="First Name"><br>
+                            </div>
+                            <div class="input-div">
+                                <span data-aos="zoom-in">Last Name:</span><input class="inputData" data-aos="zoom-in" type="text" id="lastName" placeholder="Last Name"><br>
+                            </div>
+                            <div class="input-div">
+                                <span data-aos="zoom-in">Email:</span><input class="inputData" data-aos="zoom-in" type="email" id="email" placeholder="xyz@gmail.com"><br>
+                            </div>
+                            <div class="input-div">
+                                <span data-aos="zoom-in">Message:</span><textarea class="inputData" data-aos="zoom-in" id="message" placeholder="Message" spellcheck="true"></textarea><br>
+                            </div>
+                            <div class="input-div">
+                                <span data-aos="zoom-in">Contact No:</span><input class="inputData" data-aos="zoom-in" type="tel" id="phone" name="phone" placeholder="+91-1234567890"><br>
+                            </div>
+                            <div class="contact-btn-div" data-aos="zoom-in">
+                                <button class="submitBtn" id="submit">Send Message</button>
+                                <button class="resetBtn" id="reset" title="Reset"><i class="fas fa-redo"></i></button>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>  
+        </div>
+        
+
+
+
+       
+            
+            <!-- !footer section starts -->
+            <div class="footer-section">
+                <div class="footer-upper-content">
+                    <div class="footer-left">
+                        <div class="address" data-aos="zoom-out">
+                            <h5 class="address-heading textColor">Address</h5>
+                            <p>District: Jajpur</p>
+                            <p>Odisha, 754082</p>
+                            <p><button><i class="fa-solid fa-envelope textColor"></i></button><a class="textColor" href="mailto:parthasarathimuduli10@gmail.com">parthasarathimuduli10@gmail.com</a></p>
+                            <p><button><i class="fa-solid fa-phone textColor"></i></button><a class="textColor" href="tel:+91-7978640184">7978640184</a> </p>
+                        </div>
+                    </div>
+                    <div class="footer-center">
+                        <div class="quick-links" data-aos="zoom-out">
+                            <h5 class="address-heading textColor">Quick Links</h5>
+                            <div class="quick-link-items">
+                                <p><a class="textColor" href="#">Home</a></p>
+                                <p><a class="textColor" href="./about.html">About</a></p>
+                                <p><a class="textColor" href="#skill">Skills</a></p>
+                                <p><a class="textColor" href="#project">Project</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="subscribe-content">
+                            <div class="subscribe-inner-content" data-aos="zoom-out">
+                                <h5 class="address-heading textColor">Subscribe to my newsletter</h5>
+                                <input class="subscribe-email" type="email" name="email" id="subscribe" placeholder="xyz@gmail.com">
+                                <button class="subscribe-btn" id="subscribe-btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <div class="footer-social-content">
+                    <div class="social-icons">
+                        <button><a target="_blank" href="https://www.linkedin.com/in/partha-sarathi-muduli-1738921b9/"><i title="Linkedin" class="fa-brands fa-linkedin"></i></a></button>
+                        <button><a target="_blank" href="https://www.facebook.com/parthasarathi.muduli.79/"><i title="Facebook" class="fa-brands fa-facebook"></i></a></button>
+                        <button><a target="_blank" href="https://www.instagram.com/parth.a___/"><i title="Instagram" class="fa-brands fa-instagram"></i></a></button>
+                        <button><a href="#"><i title="Twitter" class="fa-brands fa-twitter"></i></a></button>
+                        <button><a href="#"><i title="Snapchat" class="fa-brands fa-snapchat"></i></a></button>
+                        <button><a href="#"><i title="Youtube" class="fa-brands fa-youtube"></i></a></button>
+                        <button><a href="#"><i title="Github" class="fa-brands fa-github"></i></a></button>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright &copy;2020 All rights reserved | This website is made with <i class="fa-solid fa-heart"></i> by Partha Sarathi Muduli</p>
+                       
+                    </div>
+               </div>
+           </div>
+         </div>
+    </div>
+
+    
+  
+
+
+
+<!-- ! For popup message -->
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <p>Please note that this website is under development.</p>
+      <button class="close closeBtn">Ok</button>
+    </div >
+</div>
+
+
+    <!-- For JQUery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- For Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 80,
+            duration: 1000,
+        });
+    </script>
+
+
+
+    <!-- for ionion icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- for auto typing -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+
+    <!-- for tilt.js -->
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1,
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+</body>
+
+</html>
