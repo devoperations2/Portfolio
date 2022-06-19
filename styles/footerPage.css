@@ -1,0 +1,244 @@
+@import url(./firstPage.css);
+
+:root {
+    --footer-text-color: #000000;
+}
+
+.footer-section {
+    margin-top:2rem;
+    height:50%;
+    width: 100%;
+    /* background-color: #060518;  */
+    background-color: #ffffff;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(to right, rgb(56, 83, 233), rgb(255, 67, 155));
+    border-image-slice: 1;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-upper-content {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--main-padding-outline);
+  }
+  .footer-social-content {
+    height: 30%;
+    width: 100%;
+  }
+  .footer-left, .footer-right, .footer-center {
+    height: 100%;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  /* todo Footer address section starts */
+  .footer-left {
+    justify-content: left;
+    align-items: center;
+  }
+  .address {
+    font-weight:400;
+    color: var(--footer-text-color);
+    margin-top: 2rem;
+    width: auto;
+  }
+  .address-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--footer-text-color);
+    display: block;
+    position: relative;
+  }
+  .address-heading:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-image:  linear-gradient(to right, rgb(56, 83, 233), rgb(255, 67, 155));
+  }
+  .address > p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+  }
+  .address > p button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0;
+    color: var(--footer-text-color);
+    padding: 0;
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  .address > p button i {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .address > p a {
+      text-decoration: none;
+      color: var(--footer-text-color);
+  }
+  
+  /* todo Footer address section ends */
+
+  /*  todo Footer quick link section starts*/
+  .footer-center {
+    justify-content: center;
+    align-items: center;
+  }
+  .quick-links {
+    margin-top: 2rem;
+  }
+  .quick-link-items {
+    text-align: center;
+  }
+  .quick-link-items p{
+    font-weight:400;
+    color: var(--footer-text-color);
+    margin: 0.3rem 0;
+  }
+  .quick-link-items p a {
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  /* todo Footer quick link section ends */
+
+  
+  /*todo footer subscribe section starts */
+    .footer-right {
+      justify-content: right;
+      align-items: center;
+      flex-direction: column;
+    }
+    .subscribe-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items:  center;
+      flex-direction: column;
+      text-align: left;
+    }
+    .subscribe-inner-content {
+      height:auto;
+      width: 100%;
+    }
+    .subscribe-content .subscribe-inner-content input {
+      height: auto;
+      padding: 0.20rem 0.5rem;
+      width: 75%;
+      outline: none;
+    }
+    .subscribe-btn{
+      background-color: var(--background-color);
+      background-image: var(--gradient-color);
+      color: var(--light-mode-text-color);
+      padding: 9px 30px;
+      margin: 0.8rem 0 0.5rem 0rem;
+      font-weight: 400;
+      font-size: 0.9rem;
+      border: none;
+      display: inline-block;
+      text-transform: uppercase;
+      outline: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .subscribe-btn:hover,
+    .subscribe-btn:active {
+      box-shadow: var(--shadowSupport);
+      transform: translateY(-5px);
+    }
+  /*todo footer subscribe section ends */
+
+    
+  /* todo  Footer social icon section starts */
+  .footer-center {
+    flex-direction: column;
+  }
+  .social-icons {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .social-icons > button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin: 0.2rem;
+    outline: none;
+    border: none;
+    background: transparent;
+ 
+  }
+  .social-icons > button:hover {
+    transform: translateY(-5px);
+  }
+  .social-icons > button > a > i {
+    font-size: 1.6rem;
+    color: #8391FF;
+    cursor: pointer;
+  }
+  .fa-linkedin:hover {
+    color:#0073B1 !important;
+  }
+  .fa-facebook:hover {
+    color: #355AA3 !important;
+  }
+  .fa-instagram:hover {
+    color: #DC0D4A !important;
+  }
+  .fa-twitter:hover {
+    color: #1C9CEA !important;
+  }
+  .fa-snapchat:hover {
+    color: #F7F400 !important;
+  }
+  .fa-youtube:hover {
+    color: #F70000 !important;
+  }
+  .fa-github:hover {
+    color: #000000 !important;
+  }
+/* todo  Footer social icon section ends */
+/* todo  Footer copyright section starts*/
+.copyright {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:  linear-gradient(to right, rgb(56, 83, 233), rgb(255, 67, 155));
+}
+.copyright > p {
+  color: #ffffff;
+  font-size:0.8rem;
+  width: 100%;
+  
+}
+.copyright p i {
+  color: rgb(255, 0, 0);
+}
+/* todo Footer copyright section ends*/
+
+/*? Footer section ends  */
+
+/* todo for dark mode */
+.dark-mode-btn-subscribe:hover,
+.dark-mode-btn-subscribe:active {
+  box-shadow: 0px 20px 20px 0px rgba(63, 65, 90, 0.3);
+}
