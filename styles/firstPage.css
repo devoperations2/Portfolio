@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  :root {
+    --background-color: #0abcf9;
+    --gradient-color: linear-gradient(to right, #8490ff 0%, #62bdfc 100%);
+    --light-mode-text-color: #f4f0fb;
+    -shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+    --text-color: #8490ff;
+    --main-padding-outline: 0 5rem;
+  
+    /*? for dark mode */
+    --dark-mode-background: #121212;
+    --dark-mode-text: #ffffff;
+    --transition: all 0.5s ease-in-out;
+    --fore-ground-background: #1D1D1D;
+  }
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    font-family: "Noto Sans JP", sans-serif;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+  }
+  
+  /* SCROLL BAR STARTS */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar:hover {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    /* border-radius: 15px; */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    /* background-color: #abe9cd; */
+    background: -webkit-linear-gradient(315deg, #8490ff 0%, #62bdfc 74%);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    /* background-color: #abe9cd; */
+    background: -webkit-linear-gradient(315deg, #8490ff 0%, #62bdfc 74%);
+  }
+  
+  /* SCROLL BAR ENDS */
+  
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .first-page {
+    height: 100%;
+    width: 100%;
+    /*  
+    background: url(../images/firstPageBackground.webp) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+  }
+  
+  /* nav bar starts */
+  
+  .nav-bar {
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-content {
+    height: 100%;
+  }
+  
+  .menu-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+  }
+  .divider {
+    float: right;
+  }
+  
+  ul > li > a {
+    float: right;
+    padding: 8px;
+    margin: 0 1rem;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: rgb(41, 41, 41);
+    display: block; /* Display block instead of inline */
+    transition: color 0.3s linear;
+  }
+  .menu-content li a:hover,
+  .menu-content li a:active {
+    color: var(--text-color);
+  }
+  
+  .navbar-logo {
+    height: 2.3rem;
+    width: auto;
+    margin: 0.5rem 1.5rem;
+  }
+  
+  /* dark mode btn starts */
+  .darkModeCheckbox {
+    width: 42px;
+    height: 24px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    background-color: #49454f;
+    background: transparent;
+    border-radius: 24px;
+    border: solid 1px rgb(41, 41, 41);
+    transition: border-color 200ms, background-color 200ms;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  .darkModeCheckbox::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 12px;
+    background-color: rgb(41, 41, 41);
+    transition: width 200ms, height 200ms, transform 200ms, background-color 200ms;
+  }
+  
+  
+  .darkModeCheckbox.on {
+    border-color: #ffffff;
+    background-color: var(--dark-mode-background);
+  }
+  .darkModeCheckbox.on::before {
+    background-color: #8490ff;
+    width: 16px;
+    height: 16px;
+    transform: translateX(18px);
+  }
+  /* dark mode btn ends */
+  .menu-btn {
+    top: 50%;
+    left: 50%;
+    display: none;
+  }
+  
+  .menu-btn button {
+    color: rgb(41, 41, 41);
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    /* overflow: visible;  */
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 1rem 0 0;
+    transition: all 0.3s linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  }
+  .menu-btn button:hover,
+  .menu-btn button:active {
+    color: var(--text-color);
+  }
+  
+  /*!  NAVBAR menu triggers when the webpage hits 700px  */
+  @media only screen and (max-width: 700px) {
+    .menu-content li {
+      display: none;
+    }
+    .menu-btn {
+      display: block !important;
+    }
+    .menu-ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu-ul .responsive {
+      position: relative;
+    }
+    .menu-ul .responsive .menu-btn {
+      position: absolute;
+    }
+    .menu-ul .responsive li {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    .menu-content ul {
+      flex-direction: column;
+    }
+  }
+  
+  /* nav-bar ends */
+  
+  /* !first page main content starts */
+  .first-page-container {
+    max-width: 100%;
+    height: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--main-padding-outline);
+  }
+  .firstPageMain-div {
+    width: 68%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+  }
+  .firstPageMain-div > h1 {
+    font-weight: 800;
+    color: #252525;
+    font-size: 3.5rem;
+    margin: 0rem 0 0 2rem;
+    animation-duration: 2s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    user-select: none;
+    /* testing black theme */
+    /* color: #F0F4FB; */
+  }
+  .cursor_color {
+    color: var(--background-color);
+  }
+  
+  .gradient {
+    background-color: var(--background-color);
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .firstPageMain-div > .tag-line {
+    margin: 0.2rem 0 0 2rem;
+    font-weight: 800;
+    color: #252525;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    background-color: var(--background-color);
+    background-image: var(--gradient-color);
+    color: var(--light-mode-text-color);
+    padding: 10px 40px;
+    margin: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .btn:hover,
+  .btn:active {
+    box-shadow: var(--shadowSupport);
+    transform: translateY(-5px);
+  }
+  
+  .firstPageMain-Image {
+    height: 100%;
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .firstPageMain-Image img {
+    height: 70%;
+    width: 80%;
+    box-shadow: 15px -15px 0px 0px var(--text-color);
+  }
+  /* 1st page ends */
+  
+  
+  /*! Dark mode part starts here */
+  .darkMode {
+    background-color: var(--dark-mode-background) !important;
+    color: var(--dark-mode-text) !important;
+    transition: var(--transition) !important;
+  }
+  .foreground-darkMode {
+    background-color: var(--fore-ground-background);
+    box-shadow:  7px 7px 40px #070707,
+               -7px -7px 40px #1d1d1d;
+  }
+  .dark-mode-text {
+    color: var(--dark-mode-text) !important;
+  }
+  
+  .navBarColor:hover,
+  .navBarColor:active {
+    color: var(--text-color) !important;
+  }
+  
+  .dark-mode-btn:hover,
+  .dark-mode-btn:active {
+    box-shadow: 0px 20px 20px 0px rgba(63, 65, 90, 0.3);
+  }
+  
+  .pro-card-overlay {
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.85) !important;
+    z-index: 11;
+  }
+  
+  .dark-mode-inputfields {
+    background-color: var(--dark-mode-background);
+    border: 1px solid rgb(83, 83, 83);
+    color: var(--dark-mode-text);
+  }
+  .menu-btn-color-dark {
+    color: var(--text-color) !important;
+  }
